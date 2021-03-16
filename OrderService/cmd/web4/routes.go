@@ -1,4 +1,4 @@
-package web4
+package main
 
 import "github.com/gin-gonic/gin"
 
@@ -7,6 +7,6 @@ func SetupRouter() *gin.Engine {
 	router.GET("/orders/:id", GetOrderById)
 	router.GET("/orders", GetAllOrders)
 	router.DELETE("/orders/:id", DeleteOrder)
-	router.POST("/orders/:id", CreateOrder)
+	router.POST("/orders", CreateOrder)
 	return router
 }

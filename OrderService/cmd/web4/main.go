@@ -1,4 +1,4 @@
-package web4
+package main
 
 import (
 	"context"
@@ -18,7 +18,6 @@ func openDB(dsn string) (*pgxpool.Pool, error) {
 	return pool, nil
 }
 
-
 func main() {
 	dsn := flag.String("dsn", "postgresql://localhost/restaurant?user=postgres&password=alimzhan125", "PostGreSQL")
 	flag.Parse()
@@ -31,4 +30,3 @@ func main() {
 	r := SetupRouter()
 	r.Run(":4000")
 }
-

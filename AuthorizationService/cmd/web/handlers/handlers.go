@@ -58,9 +58,9 @@ func Login(c *gin.Context) {
 	row := data.DB.QueryRow(data.LoginQuery, user.Username)
 
 	var id int
-	var name, email, password, createdAt, updatedAt string
+	var name, email, password string
 
-	err := row.Scan(&id, &name, &password, &email, &createdAt, &updatedAt)
+	err := row.Scan(&id, &name, &password, &email)
 
 	if err == sql.ErrNoRows {
 		fmt.Println(sql.ErrNoRows, "err")
@@ -81,7 +81,7 @@ func Login(c *gin.Context) {
 	claims := &Claims{
 
 		User: data.User{
-			Username: name, Email: email, CreatedAt: createdAt, UpdatedAt: updatedAt,
+			Username: name, Email: email,
 		},
 		StandardClaims: jwt.StandardClaims{
 			//expiry time, expressed as unix milliseconds
