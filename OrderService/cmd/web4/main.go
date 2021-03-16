@@ -1,10 +1,10 @@
-package main
+package web4
 
 import (
 	"context"
 	"flag"
 	"github.com/jackc/pgx/v4/pgxpool"
-	"gitlab.com/AlimKenzza/authorization/pkg/dataUser"
+	"gitlab.com/AlimKenzza/authorization/pkg/dataOrders"
 	"gitlab.com/AlimKenzza/authorization/pkg/repository"
 	"log"
 )
@@ -23,11 +23,11 @@ func main() {
 	dsn := flag.String("dsn", "postgresql://localhost/restaurant?user=postgres&password=alimzhan125", "PostGreSQL")
 	flag.Parse()
 	var err error
-	dataUser.Conn, err = openDB(*dsn)
+	dataOrders.Conn, err = openDB(*dsn)
 	if err != nil {
 		log.Fatalf("Failed to connect to db: ", err)
 	}
-	userRepository = repository.NewUserRepository(dataUser.Conn)
+	orderRepository = repository.NewOrderRepository(dataOrders.Conn)
 	r := SetupRouter()
 	r.Run(":4000")
 }
