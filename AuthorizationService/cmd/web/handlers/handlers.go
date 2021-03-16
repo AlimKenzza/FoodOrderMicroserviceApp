@@ -51,7 +51,6 @@ func checkUserExists(user data.Register) bool {
 	return true
 }
 
-
 func Login(c *gin.Context) {
 	var user data.Login
 	c.Bind(&user)

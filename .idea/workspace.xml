@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="40923041-119f-40f6-ac4d-71e770b8d2c6" name="Default Changelist" comment="" />
+    <list default="true" id="40923041-119f-40f6-ac4d-71e770b8d2c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/UserService/cmd/web2/userhandler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/pkg/dataUser/connection.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/web/handlers/auth.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/web/handlers/handlers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/web/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foundation/rest_errors/rest_errors.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/middleware.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/data/DB.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/data/Models.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/data/queries.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/data/token.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/routes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/utils.go" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +51,9 @@
     </option>
   </component>
   <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ppBjw0qAK2lKdiz6eYnFq3gxFl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,11 +69,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\w2\go\src\gitlab.com\AlimKenzza\authorization\UserService\cmd\web" />
+      <recent name="C:\Users\w2\go\src\gitlab.com\AlimKenzza\authorization\UserServic" />
+      <recent name="C:\Users\w2\go\src\gitlab.com\AlimKenzza\authorization\AuthorizationService" />
       <recent name="C:\Users\w2\go\src\gitlab.com\AlimKenzza\authorization\cmd\web\handlers" />
       <recent name="C:\Users\w2\go\src\gitlab.com\AlimKenzza\authorization\pkg\data" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build gitlab.com/AlimKenzza/authorization/cmd/web2">
     <configuration name="go build gitlab.com/AlimKenzza/authorization/cmd/web" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="authorization" />
       <working_directory value="$PROJECT_DIR$" />
@@ -44,8 +86,18 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="go build gitlab.com/AlimKenzza/authorization/cmd/web2" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="authorization" />
+      <working_directory value="$PROJECT_DIR$/UserService" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/UserService/cmd/web2/main.go" />
+      <package value="gitlab.com/AlimKenzza/authorization/cmd/web2" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build gitlab.com/AlimKenzza/authorization/cmd/web2" />
         <item itemvalue="Go Build.go build gitlab.com/AlimKenzza/authorization/cmd/web" />
       </list>
     </recent_temporary>
@@ -64,6 +116,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
@@ -76,21 +139,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1615891097372" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1615899362930">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1615911012883">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615899362930" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1615899362929">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615911012883" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1615911012883">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1615899362929" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1615899362923">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1615911012883" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1615911012883">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1615899362923" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1615899362929">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1615911012883" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1615911012883">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1615899362929" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1615911012883" />
   </component>
 </project>

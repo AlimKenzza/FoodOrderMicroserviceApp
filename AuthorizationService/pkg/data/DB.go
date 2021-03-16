@@ -24,4 +24,3 @@ func Connect() {
 	}
 	DB = db
 }
-

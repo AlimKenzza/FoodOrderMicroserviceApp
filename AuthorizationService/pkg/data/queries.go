@@ -1,6 +1,5 @@
 package data
 
-
 const (
 	CheckUserExists = `SELECT user_id from users WHERE username = $1`
 	LoginQuery      = `SELECT * from users WHERE username = $1`

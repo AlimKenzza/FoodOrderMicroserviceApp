@@ -14,4 +14,3 @@ func main() {
 	// Listen and Serve in 0.0.0.0:8081
 	r.Run(":8081")
 }
-

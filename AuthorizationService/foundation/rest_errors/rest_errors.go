@@ -94,7 +94,6 @@ func NewInternalServerError(message string, err error) RestErr {
 	return result
 }
 
-
 func HandleErr(c *gin.Context, err error) error {
 	if err != nil {
 		c.Error(err)

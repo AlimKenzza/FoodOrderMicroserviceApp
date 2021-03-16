@@ -8,6 +8,7 @@ import (
 const (
 	emailRegex = `^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$`
 )
+
 func ValidateUser(user data.Register, err []string) []string {
 	emailCheck := regexp.MustCompile(emailRegex).MatchString(user.Email)
 	if emailCheck != true {
