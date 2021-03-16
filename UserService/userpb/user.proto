@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-package UserService;
+package userservice;
+option go_package = "https://gitlab.com/AlimKenzza/authorization/userservice/userpb;userpb";
 
 message UserGetRequest{
   string id = 1;
@@ -11,4 +12,8 @@ message UserGetResponse{
   string username = 2;
   string password = 3;
   string email = 4;
+}
+
+service UserService{
+  rpc User(UserGetRequest) returns(UserGetResponse){};
 }

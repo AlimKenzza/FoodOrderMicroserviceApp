@@ -7,6 +7,7 @@ import (
 	"gitlab.com/AlimKenzza/authorization/pkg/dataUser"
 	"gitlab.com/AlimKenzza/authorization/pkg/repository"
 	"log"
+	pbf "gitlab.com/AlimKenzza/authorization/userservice/userpb"
 )
 
 func openDB(dsn string) (*pgxpool.Pool, error) {
