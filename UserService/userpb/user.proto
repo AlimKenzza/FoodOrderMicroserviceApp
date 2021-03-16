@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package UserService;
+
+message UserGetRequest{
+  string id = 1;
+}
+
+message UserGetResponse{
+  string id = 1;
+  string username = 2;
+  string password = 3;
+  string email = 4;
+}

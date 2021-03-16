@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40923041-119f-40f6-ac4d-71e770b8d2c6" name="Default Changelist" comment="Added userService, also updated packages">
+      <change afterPath="$PROJECT_DIR$/UserService/userpb/user.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/cmd/web2/userhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/cmd/web2/userhandlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodService/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/FoodService/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodService/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/FoodService/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +39,17 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="C:\Go" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../Program Files/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1ppBjw0qAK2lKdiz6eYnFq3gxFl" />
   <component name="ProjectViewState">
@@ -48,10 +60,13 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -130,6 +145,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added userService, also updated packages" />
@@ -137,35 +153,5 @@
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="561" y="246" key="#Go_Modules" timestamp="1615870365369">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="561" y="246" key="#Go_Modules/0.0.1536.824@0.0.1536.824" timestamp="1615870365369" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615891097372">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1615891097372" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1615912935051">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615912935051" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1615912935051">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1615912935051" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1615912935051">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1615912935051" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1615912935051">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1615912935051" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1615911295265">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1615911295265" />
   </component>
 </project>
