@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40923041-119f-40f6-ac4d-71e770b8d2c6" name="Default Changelist" comment="Added userService, also updated packages">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/userpb/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/userpb/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/cmd/web2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/cmd/web2/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
