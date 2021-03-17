@@ -20,22 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40923041-119f-40f6-ac4d-71e770b8d2c6" name="Default Changelist" comment="added grpc">
+      <change afterPath="$PROJECT_DIR$/grpc/client/client.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorizationService/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationService/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodService/cmd/web3/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/FoodService/cmd/web3/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodService/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/FoodService/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodService/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/FoodService/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/cmd/web4/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/cmd/web4/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/cmd/web2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/cmd/web2/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/models.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/models.proto" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/models.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/models_grpc.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/models.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +67,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Home\Desktop\authorization\grpc\client" />
       <recent name="C:\Users\Home\Desktop\authorization\grpc" />
       <recent name="C:\Users\Home\Desktop\authorization\OrderService\pkg" />
       <recent name="C:\Users\w2\go\src\gitlab.com\AlimKenzza\authorization\FoodService" />
       <recent name="C:\Users\w2\go\src\gitlab.com\AlimKenzza\authorization\UserService\cmd\web" />
-      <recent name="C:\Users\w2\go\src\gitlab.com\AlimKenzza\authorization\UserServic" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build gitlab.com/AlimKenzza/authorization/server">

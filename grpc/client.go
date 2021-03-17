@@ -1,3 +1,0 @@
-package restarauntpb
-
-var GrpcClient FoodOrderServiceClient
