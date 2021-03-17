@@ -1,0 +1,82 @@
+ersion: '3.4'
+
+services:
+  grpcserver:
+    container_name: grpcserver
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: ./grpc/Dockerfile
+    environment:
+      - CONN=postgresql://host.docker.internal/restaurant?user=postgres&password=alimzhan125
+      - HOST=:4001
+    ports:
+      - "4001:4001"
+  db:
+    image: postgres
+    container_name: db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: alimzhan125
+      POSTGRES_DB: restaurant
+  authapi:
+    image: ${DOCKER_REGISTRY-}authapi
+    container_name: authapi
+    build:
+      context: .
+      dockerfile: ./AuthorizationService/Dockerfile
+    depends_on:
+      - db
+      - grpcserver
+    environment:
+      - CONN=postgresql://host.docker.internal/restaurant?user=postgres&password=alimzhan125
+      - HOST=:4000
+      - DEPCONN=http://departmentapi:4001
+      - GRPC_SERVER_CONN=grpcserver:4002
+    ports:
+      - "4000:4000"
+  foodapi:
+    image: ${DOCKER_REGISTRY-}foodapi
+    container_name: foodapi
+    build:
+      context: .
+      dockerfile: ./FoodService/Dockerfile
+    depends_on:
+      - db
+      - grpcserver
+    environment:
+      - CONN=postgresql://host.docker.internal/restaurant?user=postgres&password=alimzhan125
+      - HOST=:4040
+    ports:
+      - "4040:4040"
+
+  orderapi:
+    image: ${DOCKER_REGISTRY-}orderapi
+    container_name: orderapi
+    build:
+      context: .
+      dockerfile: ./OrderService/Dockerfile
+    depends_on:
+      - db
+      - grpcserver
+    environment:
+      - CONN=postgresql://host.docker.internal/restaurant?user=postgres&password=alimzhan125
+      - HOST=:4004
+    ports:
+      - "4004:4004"
+
+  userapi:
+    image: ${DOCKER_REGISTRY-}userapi
+    container_name: userapi
+    build:
+      context: .
+      dockerfile: ./UserService/Dockerfile
+    depends_on:
+      - db
+      - grpcserver
+    environment:
+      - CONN=postgresql://host.docker.internal/restaurant?user=postgres&password=alimzhan125
+      - HOST=:4005
+    ports:
+      - "4005:4005"
