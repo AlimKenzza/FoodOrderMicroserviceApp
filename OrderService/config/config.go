@@ -2,6 +2,6 @@ package config
 
 const (
 	DB_USER     = "postgres"
-	DB_PASSWORD = "alimzhan125"
+	DB_PASSWORD = "123"
 	DB_NAME     = "restaurant"
 )

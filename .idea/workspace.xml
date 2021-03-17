@@ -19,14 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40923041-119f-40f6-ac4d-71e770b8d2c6" name="Default Changelist" comment="Added userService, also updated packages">
-      <change afterPath="$PROJECT_DIR$/grpc/client.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpc/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpc/models.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpc/models.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpc/server/main.go" afterDir="false" />
+    <list default="true" id="40923041-119f-40f6-ac4d-71e770b8d2c6" name="Default Changelist" comment="added grpc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/cmd/web4/orderhandlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/cmd/web4/orderhandlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationService/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationService/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodService/cmd/web3/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/FoodService/cmd/web3/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodService/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/FoodService/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodService/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/FoodService/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/cmd/web4/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/cmd/web4/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/cmd/web2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/cmd/web2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/models.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/models.proto" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/models.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/models_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/server/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +86,7 @@
       <recent name="C:\Users\w2\go\src\gitlab.com\AlimKenzza\authorization\UserServic" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build gitlab.com/AlimKenzza/authorization/cmd/web3">
+  <component name="RunManager" selected="Go Build.go build gitlab.com/AlimKenzza/authorization/server">
     <configuration name="go build gitlab.com/AlimKenzza/authorization/cmd/web" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="authorization" />
       <working_directory value="$PROJECT_DIR$" />
@@ -105,9 +114,29 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="go build gitlab.com/AlimKenzza/authorization/cmd/web4" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="authorization" />
+      <working_directory value="$PROJECT_DIR$/OrderService" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/OrderService/cmd/web4/main.go" />
+      <package value="gitlab.com/AlimKenzza/authorization/cmd/web4" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build gitlab.com/AlimKenzza/authorization/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="authorization" />
+      <working_directory value="$PROJECT_DIR$/grpc" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/grpc/server/main.go" />
+      <package value="gitlab.com/AlimKenzza/authorization/server" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build gitlab.com/AlimKenzza/authorization/server" />
         <item itemvalue="Go Build.go build gitlab.com/AlimKenzza/authorization/cmd/web3" />
+        <item itemvalue="Go Build.go build gitlab.com/AlimKenzza/authorization/cmd/web4" />
         <item itemvalue="Go Build.go build gitlab.com/AlimKenzza/authorization/cmd/web2" />
         <item itemvalue="Go Build.go build gitlab.com/AlimKenzza/authorization/cmd/web" />
       </list>
@@ -149,7 +178,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added userService, also updated packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added userService, also updated packages" />
+    <MESSAGE value="added grpc" />
+    <option name="LAST_COMMIT_MESSAGE" value="added grpc" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

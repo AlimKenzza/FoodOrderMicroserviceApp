@@ -18,9 +18,8 @@ func openDB(dsn string) (*pgxpool.Pool, error) {
 	return pool, nil
 }
 
-
 func main() {
-	dsn := flag.String("dsn", "postgresql://localhost/restaurant?user=postgres&password=alimzhan125", "PostGreSQL")
+	dsn := flag.String("dsn", "postgresql://localhost/restaraunt?user=postgres&password=123", "PostGreSQL")
 	flag.Parse()
 	var err error
 	dataUser.Conn, err = openDB(*dsn)
@@ -31,4 +30,3 @@ func main() {
 	r := SetupRouter()
 	r.Run(":4000")
 }
-

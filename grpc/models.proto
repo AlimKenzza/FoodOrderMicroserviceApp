@@ -33,7 +33,5 @@ message FoodsByOrderResponse{
 }
 
 service FoodOrderService{
-  rpc GetOrders(OrderRequest) returns (stream OrderResponse);
-  rpc GetFoods(FoodRequest) returns(stream FoodResponse);
   rpc GetOFoodsByOrder(FoodsByOrderRequest) returns(stream FoodsByOrderResponse);
 }
