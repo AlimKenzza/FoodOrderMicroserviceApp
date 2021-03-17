@@ -9,6 +9,7 @@ import (
 	"gitlab.com/AlimKenzza/authorization/pkg/data"
 	"gitlab.com/AlimKenzza/authorization/utils"
 	"net/http"
+	"os"
 	"time"
 )
 
@@ -57,7 +58,7 @@ func Login(c *gin.Context) {
 
 	row := data.DB.QueryRow(data.LoginQuery, user.Username)
 
-	var id int
+	var id int64
 	var name, email, password string
 
 	err := row.Scan(&id, &name, &password, &email)
@@ -81,7 +82,7 @@ func Login(c *gin.Context) {
 	claims := &Claims{
 
 		User: data.User{
-			Username: name, Email: email,
+			Id: id, Username: name, Email: email,
 		},
 		StandardClaims: jwt.StandardClaims{
 			//expiry time, expressed as unix milliseconds
@@ -102,4 +103,51 @@ func Login(c *gin.Context) {
 
 	fmt.Println(tokenString)
 	c.JSON(http.StatusOK, gin.H{"success": true, "message": "logged in succesfully", "user": claims.User, "token": tokenString})
+}
+
+func LoginUser(c *gin.Context) {
+	var userr data.Login
+	c.Bind(&userr)
+
+	row := data.DB.QueryRow(data.LoginQuery, userr.Username)
+
+	var id int
+	var name, email, password string
+
+	err := row.Scan(&id, &name, &password, &email)
+
+	if err == sql.ErrNoRows {
+		fmt.Println(sql.ErrNoRows, "err")
+		c.JSON(http.StatusUnauthorized, gin.H{"success": false, "msg": "incorrect credentials"})
+		return
+	}
+
+	match := data.CheckPasswordHash(userr.Password, password)
+	if !match {
+		c.JSON(http.StatusUnauthorized, gin.H{"success": false, "msg": "incorrect credentials"})
+		return
+	}
+
+	token, err := CreateToken(id)
+	if err != nil {
+		c.JSON(http.StatusUnprocessableEntity, err.Error())
+		return
+	}
+	c.JSON(http.StatusOK, token)
+	c.JSON(http.StatusOK, id)
+}
+
+func CreateToken(id int) (string, error) {
+	var err error
+	os.Setenv("ACCESS_SECRET", "jdnfksdmfksd")
+	atClaims := jwt.MapClaims{}
+	atClaims["authorized"] = true
+	atClaims["id"] = id
+	atClaims["exp"] = time.Now().Add(time.Minute * 15).Unix()
+	at := jwt.NewWithClaims(jwt.SigningMethodHS256, atClaims)
+	token, err := at.SignedString([]byte(os.Getenv("ACCESS_SECRET")))
+	if err != nil {
+		return "", err
+	}
+	return token, nil
 }

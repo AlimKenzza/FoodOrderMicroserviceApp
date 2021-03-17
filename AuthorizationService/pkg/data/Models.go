@@ -19,6 +19,7 @@ type User struct {
 }
 
 type Login struct {
+	Id       int64  `json:"id" sql:"user_id"`
 	Password string `json:"password"`
 	Username string `json:"username"`
 }

@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"gitlab.com/AlimKenzza/authorization/interfaces"
+	"gitlab.com/AlimKenzza/authorization/pkg/auth"
 	"gitlab.com/AlimKenzza/authorization/pkg/dataOrders"
 	"strconv"
 )
@@ -42,12 +43,23 @@ func DeleteOrder(c *gin.Context) {
 	c.Data(500, jsonContentType, []byte("Failed to delete order"))
 }
 func CreateOrder(c *gin.Context) {
+	err := auth.TokenValid(c.Request)
+	if err != nil {
+		c.Data(403, jsonContentType, []byte("Invalid token"))
+		return
+	}
+	userId, err := auth.ExtractTokenMetadata(c.Request)
+	if userId == 0 {
+		c.Data(401, jsonContentType, []byte("Unauthorized. Please, sign in"))
+		return
+	}
 	order := &dataOrders.Order{}
-	err := c.BindJSON(order)
+	err = c.BindJSON(order)
 	if err != nil {
 		c.Data(400, jsonContentType, []byte("Fill all fields"))
 		return
 	}
+	order.UserID = userId
 	if orderRepository.CreateOrder(*order) {
 		c.Data(200, jsonContentType, []byte("Created order \n"))
 	}

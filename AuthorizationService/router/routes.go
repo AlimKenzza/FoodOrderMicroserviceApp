@@ -13,5 +13,6 @@ func SetupRouter() *gin.Engine {
 	router.Use(middlewares.CORSMiddleware())
 	router.POST("/register", handlers.Create)
 	router.POST("/login", handlers.Login)
+	router.POST("/signin", handlers.LoginUser)
 	return router
 }

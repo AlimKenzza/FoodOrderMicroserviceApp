@@ -8,13 +8,13 @@ import (
 	"log"
 )
 
-type OrderRepository struct{
+type OrderRepository struct {
 	pool pgxpool.Pool
 }
 
 func (o OrderRepository) GetAllOrders() []*dataOrders.Order {
-	stmt:= "SELECT * FROM Orders"
-	rows, err := o.pool.Query(context.Background(),stmt)
+	stmt := "SELECT * FROM Orders"
+	rows, err := o.pool.Query(context.Background(), stmt)
 	if err != nil {
 		log.Fatal("Failed to SELECT: %v", err)
 		return nil
@@ -36,7 +36,7 @@ func (o OrderRepository) GetAllOrders() []*dataOrders.Order {
 	return orders
 }
 
-func (r OrderRepository) GetOrderById(id int) *dataOrders.Order{
+func (r OrderRepository) GetOrderById(id int) *dataOrders.Order {
 	stmt := "SELECT * FROM orders WHERE order_id = $1"
 	o := &dataOrders.Order{}
 	err := r.pool.QueryRow(context.Background(), stmt, id).Scan(&o.ID, &o.UserID, &o.FoodID, &o.Count)
@@ -56,16 +56,27 @@ func (o OrderRepository) DeleteOrder(order dataOrders.Order) bool {
 	return true
 }
 
-func (o OrderRepository) CreateOrder(order dataOrders.Order) bool {
+//func (o OrderRepository) CreateOrder(order dataOrders.Order) bool {
+//	_, err := o.pool.Exec(context.Background(),
+//		"INSERT INTO ORDERS VALUES($1,$2,$3,$4)",
+//		order.ID, order.UserID, order.FoodID, order.Count)
+//	if err != nil {
+//		return false
+//	}
+//	return true
+//}
+
+func (o *OrderRepository) CreateOrder(order dataOrders.Order) bool {
 	_, err := o.pool.Exec(context.Background(),
 		"INSERT INTO ORDERS VALUES($1,$2,$3,$4)",
 		order.ID, order.UserID, order.FoodID, order.Count)
 	if err != nil {
+		log.Printf("Unable to INSERT: %v\n", err)
 		return false
 	}
 	return true
 }
 
-func NewOrderRepository(conn *pgxpool.Pool) interfaces.IOrderRepository{
+func NewOrderRepository(conn *pgxpool.Pool) interfaces.IOrderRepository {
 	return &OrderRepository{*conn}
 }
