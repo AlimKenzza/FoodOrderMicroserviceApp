@@ -64,5 +64,4 @@ func CreateOrder(c *gin.Context) {
 		c.Data(200, jsonContentType, []byte("Created order \n"))
 	}
 	c.Data(500, jsonContentType, []byte("Failed to create order"))
-
 }

@@ -1,0 +1,39 @@
+syntax = "proto3";
+package grpc;
+option go_package="https://gitlab.com/AlimKenzza/authorization/grpc/restarauntpb;restarauntpb";
+
+message FoodRequest{
+  int32 foodID = 1;
+}
+message FoodResponse{
+  int32 foodID = 1;
+  string foodName = 2;
+  string description = 3;
+  int32 quantity = 4;
+  int32 price = 5;
+}
+message OrderRequest{
+  int32 orderID = 1;
+}
+message OrderResponse{
+  int32 orderID = 1;
+  int32 userID = 2;
+  int32 foodID = 3;
+  int32 count = 4;
+}
+message FoodsByOrderRequest{
+  int32 orderID = 1;
+}
+message FoodsByOrderResponse{
+  int32 foodID = 1;
+  string foodName = 2;
+  string description = 3;
+  int32 quantity = 4;
+  int32 price = 5;
+}
+
+service FoodOrderService{
+  rpc GetOrders(OrderRequest) returns (stream OrderResponse);
+  rpc GetFoods(FoodRequest) returns(stream FoodResponse);
+  rpc GetOFoodsByOrder(FoodsByOrderRequest) returns(stream FoodsByOrderResponse);
+}
